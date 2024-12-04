@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed; /* Makes the navbar stay at the top of the page */
+  top: 0; /* Aligns the navbar to the top */
+  left: 0;
+  width: 100%; /* Ensures the navbar spans the full width of the page */
+  z-index: 1000; /* Keeps the navbar above other content */
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #6b54a1;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+}
+
+.navbar-right {
+  display: flex;
+  gap: 10px;
+  padding-right: 30px;
+}
+
+.navbar-left {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.nav-button {
+  background-color: #1132c3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+body {
+  padding-top: 60px; /* Adds space below the fixed navbar to avoid content overlap */
+}
