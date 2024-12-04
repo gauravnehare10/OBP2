@@ -28,7 +28,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     return encoded_jwt
 
 def authenticate_user(username: str, password: str):
-    user = conn.user.user_details.find_one({"username": username})
+    user = conn.user.mortgage_details.find_one({"username": username})
     if not user:
         return False
     # If user password is plaintext, hash it (not recommended for production)

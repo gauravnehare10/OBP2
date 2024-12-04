@@ -144,7 +144,6 @@ const Home = () => {
               </label>
             </div>
           </div>
-            
           );
         }
       case 3:

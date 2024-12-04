@@ -14,7 +14,7 @@ templates = Jinja2Templates(directory="templates")
 async def add_user(request: User):
     try:
         print(request)
-        user = conn.user.user_details.insert_one(dict(request))
+        user = conn.user.mortgage_details.insert_one(dict(request))
         user_details = {
         "name": request.name,
         "username": request.username,
@@ -47,16 +47,12 @@ async def login(login_data: LoginModel):
 @user.put("/mortgage/{username}")
 async def update_mortgage_details(username: str, details: MortgageDetails):
     # Check if the user exists in the database
-    existing_user = conn.user.user_details.find_one({"username": username})
+    existing_user = conn.user.mortgage_details.find_one({"username": username})
 
     if existing_user:
         # Update the existing user's data
-        conn.user.user_details.update_one(
+        conn.user.mortgage_details.update_one(
             {"username": username},
             {"$set": details.dict()}
         )
         return {"message": "User data updated successfully!", "data": details}
-    else:
-        # Insert new user data
-        conn.user.user_details.find_one_and_update({"username": username},{"$set": details.dict()})
-        return {"message": "New user data saved successfully!", "data": details}
