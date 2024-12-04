@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "project_2_backend/main.py",
+            "use": "@vercal/python"
+        }
+    ],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "project_2_backend/main.py"
+        }
+    ]
+}

@@ -24,17 +24,18 @@
 }
 
 .nav-button {
-  background-color: #1132c3;
+  background-color: transparent;
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .nav-button:hover {
-  background-color: #777;
+  text-decoration: underline;
+  color: yellow;
 }
 
 body {
