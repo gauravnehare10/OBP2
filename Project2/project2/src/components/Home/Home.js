@@ -38,7 +38,7 @@ const Home = () => {
           username: userdata.username,
         };
 
-    axios.put(`http://127.0.0.1:8000/mortgage/${userdata.username}`, data)
+    axios.put(`https://fastapi-app-2-c27y.onrender.com/mortgage/${userdata.username}`, data)
     .then((response) => {
       console.log('Response:', response.data);
       alert('Data submitted successfully!');
@@ -80,6 +80,8 @@ const Home = () => {
     switch (currentStep) {
       case 1:
         return (
+          <>
+          <h1>Welcome, {userdata.username}</h1>
           <div className="step-item">
             <label>Do you have a mortgage?</label>
             <div>
@@ -104,6 +106,7 @@ const Home = () => {
               </label>
             </div>
           </div>
+          </>
         );
       case 2:
         if (hasMortgage) {
@@ -123,7 +126,7 @@ const Home = () => {
             <div className="step-item">
             <label>Are you looking for new mortgage?</label>
             <div>
-              <label className='radio-btn'>
+              <label>
                 <input
                   type="radio"
                   name="look-for-mortgage"
@@ -133,7 +136,7 @@ const Home = () => {
                 />
                 Yes
               </label>
-              <label className='radio-btn'>
+              <label>
                 <input
                   type="radio"
                   name="look-for-mortgage"

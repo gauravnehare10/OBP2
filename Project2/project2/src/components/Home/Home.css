@@ -41,18 +41,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .step-item label {
   flex-grow: 1;
-}
-
-.radio-btn{
-  border: solid black 1px;
-  padding: 5px;
-  margin-right: 5px;
-  border-radius: 5px;
 }
 
 .step-item input,
@@ -67,7 +60,7 @@
 .navigation-buttons {
   display: flex;
   justify-content: space-between;
-  width: 65%;
+  width: 100%;
 }
 
 .navigation-buttons button{

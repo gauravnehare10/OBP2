@@ -52,7 +52,7 @@ const Register = () => {
       return;
     }
 
-    axios.post('http://127.0.0.1:8000/register', {
+    axios.post('https://fastapi-app-2-c27y.onrender.com/register', {
       name: name,
       username: username,
       password: password,

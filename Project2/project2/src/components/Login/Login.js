@@ -21,7 +21,7 @@ const Login = () => {
     }
 
     setError('');
-    axios.post('http://127.0.0.1:8000/login', {
+    axios.post('https://fastapi-app-2-c27y.onrender.com/login', {
       username: username,
       password: password
     })
